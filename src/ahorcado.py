@@ -12,30 +12,32 @@ Autor: [Nombre del alumno]
 Fecha: [Fecha]
 """
 
+import random
 
-def limpiar_pantalla():
+def solicitar_palabra() -> str:
+    palabras = [
+    "arbol", "camino", "viento", "bosque", "lluvia", "piedra", "sombra", "arena", "campo", "monte",
+    "rioja", "tierra", "valle", "flores", "luces", "noche", "sonido", "fuerte", "suave", "brisa",
+    "carro", "fuente", "sendero", "nubea", "rocio", "fuego", "hojas", "ramas", "tronco", "montes",
+    "cielo", "claro", "oscuro", "polvo", "bruma", "espiga", "trigo", "sabio", "letra", "cuento",
+    "tiempo", "reloj", "minuto", "sueño", "tarde", "mañana", "planta", "fruta", "sabor", "dulce",
+    "amargo", "verde", "marron", "azul", "blanco", "negro", "rojo", "naranja", "violeta", "gris",
+    "hierro", "cobre", "plata", "oro", "torre", "puente", "casa", "silla", "mesa", "cuadro",
+    "suelo", "techo", "pared", "puerta", "ventana", "cortina", "huerto", "pradera", "playa",
+    "rastro", "huella", "paso", "viaje", "destino", "rumbo", "sendero", "tramo", "borde", "curva",
+    "reinos", "valles", "cantos", "nubes", "mares", "ríos", "piedras", "campos", "flores", "llamas"
+]
+
+    indice = random.randint(0, 99)
+    palabra = palabras[indice]
+    return(palabra.upper)
+
+def limpiar_pantalla(): # [x]
     """
-    Imprime varias líneas en blanco para 'limpiar' la consola
+    Imprime varias líneas en blanco para 'limpiar' la consola 
     y que el jugador 2 no vea la palabra introducida
     """
     print("\n" * 50)
-
-
-def solicitar_palabra():
-    """
-    Solicita una palabra al jugador 1
-    La palabra debe tener mínimo 5 caracteres y solo contener letras
-    
-    Returns:
-        str: La palabra a adivinar en mayúsculas
-    """
-    # TODO: Implementar la función
-    # - Usar un bucle while para repetir hasta que la palabra sea válida
-    # - Verificar que tenga al menos 5 caracteres (len())
-    # - Verificar que solo contenga letras (isalpha())
-    # - Convertir a mayúsculas (upper())
-    pass
-
 
 def solicitar_letra(letras_usadas):
     """
@@ -48,12 +50,29 @@ def solicitar_letra(letras_usadas):
     Returns:
         str: La letra introducida en mayúsculas
     """
+
+    letra = None
+    while letra == None:
+        letra = input("Introduce una letra: ")
+        if len(letra) == 1:
+            if letra.isalpha():
+                letra = letra.upper()
+                if letra not in letras_usadas:
+                    letras_usadas.append(letra)
+                    return(letra)
+                else:
+                    letra = None
+            else:
+                letra = None
+        else:
+            letra = None
+
     # TODO: Implementar la función
-    # - Usar un bucle while para repetir hasta que la letra sea válida
-    # - Verificar que sea solo un carácter (len() == 1)
-    # - Verificar que sea una letra (isalpha())
+    # - Usar un bucle while para repetir hasta que la letra sea válida # [x]
+    # - Verificar que sea solo un carácter (len() == 1) # [x]
+    # - Verificar que sea una letra (isalpha()) # [x]
     # - Verificar que no esté en letras_usadas (operador 'in')
-    # - Convertir a mayúsculas (upper())
+    # - Convertir a mayúsculas (upper()) # [x]
     pass
 
 
@@ -66,6 +85,9 @@ def mostrar_estado(palabra_oculta, intentos, letras_usadas):
         intentos (int): Número de intentos restantes
         letras_usadas (list): Lista de letras ya usadas
     """
+
+    print()
+
     # TODO: Implementar la función
     # - Imprimir intentos restantes
     # - Imprimir la palabra con espacios entre caracteres
@@ -101,7 +123,7 @@ def jugar():
     
     # Configuración inicial
     INTENTOS_MAXIMOS = 5
-    
+    lista_usadas = []
     # TODO: Solicitar la palabra al jugador 1
     # palabra = solicitar_palabra()
     
