@@ -164,12 +164,14 @@ def jugar(palabra:str):
         if "_" not in palabra_oculta:
             juego_terminado = True
             print("Has ganado")
-            print(palabra_oculta)
+            print(f"La palabra era {palabra}")
         elif letra not in palabra:
             intentos_restantes -= 1
-            print("Has perdido")
+            print("Has fallado \n")
             if intentos_restantes == 0:
+                print(f"La palabra era {palabra}")
                 juego_terminado = True
+
     
 
         
@@ -198,6 +200,12 @@ def main():
     """
     palabra = solicitar_palabra()
     jugar(palabra)
+
+    jugar_otra_vez = input("\n¿Quieres volver a jugar? S/N): ")
+    if jugar_otra_vez.lower() == 's':
+        main()
+    else:
+        print("Cerrando...")
 
 
 if __name__ == "__main__":

@@ -132,6 +132,12 @@ Letras usadas: ['A', 'P', 'Y']
 ¡FELICIDADES! Has adivinado la palabra: PYTHON
 ```
 
+## Evidencia de debbug
+
+![Ejemplo debbugin](assets/debbug.png)
+
+**Ejemplo para probar la comprobación de variables durante la ejecución del programa.**
+
 ## Notas Importantes
 
 - **NO** es necesario terminar la solución completamente
