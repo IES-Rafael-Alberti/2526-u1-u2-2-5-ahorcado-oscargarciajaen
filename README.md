@@ -348,6 +348,12 @@ Letras usadas: ['A', 'P', 'Y']
 
 ![Ejemplo debug](assets/debug.png)
 
+En esta imagen podemos ver el estado de las variables durante el debug de mi programa.
+
+## Evidencia de los comentarios
+
+https://github.com/IES-Rafael-Alberti/2526-u1-u2-2-5-ahorcado-oscargarciajaen/blob/e6f9c3ddbd87863daa10adb88f0fac306cb93523/src/ahorcado.py#L56-L70
+
 **Ejemplo para probar la comprobación de variables durante la ejecución del programa.**
 
 ## Notas Importantes
