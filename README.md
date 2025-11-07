@@ -346,7 +346,7 @@ Letras usadas: ['A', 'P', 'Y']
 
 ## Evidencia de debbug
 
-![Ejemplo debugg](assets/debugg.png)
+![Ejemplo debug](assets/debug.png)
 
 **Ejemplo para probar la comprobación de variables durante la ejecución del programa.**
 
