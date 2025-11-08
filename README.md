@@ -346,9 +346,15 @@ Letras usadas: ['A', 'P', 'Y']
 
 ## Evidencia de debbug
 
+**En esta imagen podemos ver el estado de las variables durante el debug de mi programa.**
+
 ![Ejemplo debug](assets/debug.png)
 
-En esta imagen podemos ver el estado de las variables durante el debug de mi programa.
+**Ejemplo de fallo en la asignacion de juego_terminado**
+
+En este ejemplo el programa no para de preguntar letras, porque juego_terminado sigue estando como "False"
+
+![Ejemplo debug fallado](assets/debug_con_fallo.png)
 
 ## Evidencia de los comentarios
 
