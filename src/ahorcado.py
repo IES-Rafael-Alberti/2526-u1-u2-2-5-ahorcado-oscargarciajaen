@@ -179,7 +179,7 @@ def main():
 
     jugar_otra_vez = input("\n¿Quieres volver a jugar? (S/N): ")
     if jugar_otra_vez.lower() == 's':
-        main()
+        jugar(palabra)
     else:
         print("Cerrando...")
 
