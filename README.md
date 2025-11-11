@@ -358,6 +358,8 @@ En este ejemplo el programa no para de preguntar letras, porque juego_terminado 
 
 ## Evidencia de los comentarios
 
+Este enlace te lleva directamente a los comentarios que han sido cambiados
+
 https://github.com/IES-Rafael-Alberti/2526-u1-u2-2-5-ahorcado-oscargarciajaen/blob/e6f9c3ddbd87863daa10adb88f0fac306cb93523/src/ahorcado.py#L56-L70
 
 **Ejemplo para probar la comprobación de variables durante la ejecución del programa.**
