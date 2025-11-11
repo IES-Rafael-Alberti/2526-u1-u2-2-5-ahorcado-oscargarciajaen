@@ -350,6 +350,7 @@ Letras usadas: ['A', 'P', 'Y']
 
 ![Ejemplo debug](assets/debug.png)
 
+
 **Ejemplo de fallo en la asignacion de juego_terminado**
 
 En este ejemplo el programa no para de preguntar letras, porque juego_terminado sigue estando como "False"

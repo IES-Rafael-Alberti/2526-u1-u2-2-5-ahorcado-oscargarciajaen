@@ -82,7 +82,7 @@ def solicitar_letra(letras_usadas):
                 letra = None
         else:
             letra = None
-    pass
+
 
 
 def mostrar_estado(palabra_oculta, intentos, letras_usadas):
@@ -101,7 +101,7 @@ def mostrar_estado(palabra_oculta, intentos, letras_usadas):
     print(f"Le quedan {intentos} intentos ")
     print(" ".join(palabra_oculta))
     print("Letras usadas -> " + " ".join(letras_usadas))
-    pass
+    
 
 
 def actualizar_palabra_oculta(palabra, palabra_oculta, letra):
@@ -128,7 +128,6 @@ def actualizar_palabra_oculta(palabra, palabra_oculta, letra):
             palabra_oculta[i] = letra
             acertado = True
     return palabra_oculta
-    pass
 
 
 def jugar(palabra: str):
@@ -166,7 +165,6 @@ def jugar(palabra: str):
             if intentos_restantes == 0:
                 print(f"La palabra era {palabra}")
                 juego_terminado = True
-    pass
 
 
 def main():
